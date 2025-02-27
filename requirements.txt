@@ -1,0 +1,7 @@
+google-generativeai
+streamlit
+streamlit-authenticator
+googlesearch-python==1.2.3
+python-dotenv
+streamlit_lottie==0.0.5
+openpyxl

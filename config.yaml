@@ -1,0 +1,11 @@
+cookie:
+  expiry_days: 30
+  key: abcd
+  name: Margdarshak.AI
+credentials:
+  usernames:
+    demo:
+      email: shobhitadhya@xyz
+      name: demotest
+      password: $2b$12$tdAviStgh665fxJxr79ERO6HuwU1P28CmrNMcW.e38G3.weX.aili
+      preferred_lang: English
