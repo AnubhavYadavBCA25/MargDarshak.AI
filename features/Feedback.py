@@ -1,6 +1,17 @@
 import streamlit as st
+import pymongo
 
-st.header("Feedback", divider='rainbow')
+# MongoDB Atlas Connection String 
+MONGO_URI = "mongodb+srv://anubhavyadav77ff:anubhav123@cluster0.wimg7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+DATABASE_NAME = "user_feedback"
+COLLECTION_NAME = "feedback"
+
+# Connect to MongoDB
+client = pymongo.MongoClient(MONGO_URI)
+db = client[DATABASE_NAME]
+collection = db[COLLECTION_NAME]
+
+st.header("📝Feedback", divider='rainbow')
 
 with st.form("feedback_form"):
     name = st.text_input("Full Name*", value=None, placeholder="John Doe")
@@ -17,4 +28,13 @@ if submit:
         st.error("Please fill all the required fields.")
         st.stop()
     else:
-        st.success("Thank you for your feedback!") 
+        feedback_document = {
+            "Name": name,
+            "Email": email,
+            "Rating": rating,
+            "Easy to Use": easy_to_use,
+            "Challenges": challenges,
+            "General Feedback": general_feedback
+        }
+        collection.insert_one(feedback_document)
+        st.success("Thank you for your feedback! Your response has been recorded in MongoDB.") 

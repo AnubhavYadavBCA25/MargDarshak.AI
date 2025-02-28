@@ -5,3 +5,15 @@ googlesearch-python==1.2.3
 python-dotenv
 streamlit_lottie==0.0.5
 openpyxl
+pymongo[srv]==3.6
+pymongo==4.11.1
+fitz
+plotly
+pandas
+pyPDF2
+faiss-cpu
+sentence-transformers
+pyttsx3
+SpeechRecognition
+pipwin
+pyaudio

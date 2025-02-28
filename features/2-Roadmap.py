@@ -52,7 +52,7 @@ model = genai.GenerativeModel(model_name="gemini-2.0-flash",
                               safety_settings=safety_settings,
                               system_instruction=system_instructions)
 
-st.header("AI Roadmap Generator", divider="rainbow")
+st.header("📚AI Roadmap Generator", divider="rainbow")
 with st.expander('What is Roadmap Generator?'):
     st.write("Margdarshak.AI is an AI-based Roadmap Generator that helps students to create a roadmap for their academic journey. And provide course recommendations, study material generation and more.")
 
@@ -63,11 +63,12 @@ with st.form("my_form"):
     preferred_learning_mode = st.selectbox("Preferred Learning Mode*", ["Self-Paced", "Online Courses", "Mentorship"])
     time_commitment = st.number_input("Time Commitment (in hours)*", help="Enter the time commitment in hours per day.", min_value=1, max_value=10, value=5)
     career_goal_timeline = st.selectbox("Career Goal Timeline*", ["0-6 Months", "6-12 Months", "1+ Years"])
+    experience_level = st.selectbox("Experience Level*", ["Beginner", "Intermediate", "Advanced"])
     st.markdown("**Required*")
     submit_button = st.form_submit_button(label="Generate Roadmap")
 
 if submit_button:
-    if not target_career or not skill_already_have or not skill_want_to_learn or not preferred_learning_mode or not time_commitment or not career_goal_timeline:
+    if not target_career or not skill_already_have or not skill_want_to_learn or not preferred_learning_mode or not time_commitment or not career_goal_timeline or not experience_level:
         st.error("Please fill all the required fields.")
         st.stop()
     else:
@@ -76,7 +77,7 @@ st.divider()
 with st.spinner("Processing..."):
     if target_career and skill_already_have and skill_want_to_learn and preferred_learning_mode and time_commitment and career_goal_timeline:
         prompt = f"""
-            Generate the Roadmap for a student who wants to become a {target_career}. The student already has skills like {skill_already_have} and wants to learn skills like {skill_want_to_learn}. The student prefers {preferred_learning_mode} learning mode and can commit {time_commitment} hours per day. The student wants to achieve the career goal in {career_goal_timeline}.
+            Generate the Roadmap for a student who wants to become a {target_career}. The student already has skills like {skill_already_have} and wants to learn skills like {skill_want_to_learn}. The student prefers {preferred_learning_mode} learning mode and can commit {time_commitment} hours per day. The student wants to achieve the career goal in {career_goal_timeline}. The student has {experience_level} experience level.
     """
         response = model.generate_content(prompt)
         st.subheader("Hi, Here is the Roadmap for you:")

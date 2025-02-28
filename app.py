@@ -86,23 +86,23 @@ def intro():
 
             # FAQ 1
             with st.expander("What is MargDarshak.AI?"):
-                st.write("MargDarshak.AI is an AI-powered learning assistant that helps students choose the right courses, develop skills, and build career-focused projects.")
+                st.write("MargDarshak.AI is an AI-powered learning assistant that helps students choose the right courses, develop skills, and build career-focused projects. It offers personalized recommendations and study plans based on your interests and career goals.")
 
             # FAQ 2
             with st.expander("What are the features of MargDarshak.AI?"):
-                st.write("It offers AI-driven course recommendations, study material generation, resume building, coding assistance, and personalized study plans.")
+                st.write("It offers AI-driven course recommendations, study material generation, resume building, coding assistance, and personalized study plans. The platform also provides career guidance and project ideas to help students make informed decisions.")
 
             # FAQ 3
             with st.expander("How MargDarshak.AI will help you?"):
-                st.write("It simplifies learning by providing smart recommendations, AI-generated resources, and career guidance tailored to your goals.")
+                st.write("It simplifies learning by providing smart recommendations, AI-generated resources, and career guidance tailored to your goals. The platform ensures you focus on relevant skills, courses, and projects, enhancing your learning experience.")
 
             # FAQ 4
             with st.expander("How to use MargDarshak.AI?"):
-                st.write("Simply enter your interests, career goals, or learning preferences, and the AI will provide customized recommendations and resources.")
+                st.write("Simply enter your interests, career goals, or learning preferences, and the AI will provide customized recommendations and resources. You can explore various features like AI Mentor, Roadmap Generator, Career Guidance, and Feedback to enhance your learning journey.")
 
             # FAQ 5
             with st.expander("How to contact Team MargDarshak?"):
-                st.write("You can contact us from the Feedback feature in the sidebar navigation.")
+                st.write("You can contact us from the Feedback feature in the sidebar navigation. Share your experience, suggestions, or queries, and our team will get back to you promptly.")
 
 
 authentication()
@@ -110,9 +110,13 @@ authentication()
 if st.session_state["authentication_status"]:
      pg = st.navigation([
         st.Page(intro, title="Home", icon="🏠"),
-        st.Page("features/0-AI-Mentor.py", title="AI Mentor", icon="🧑🏻‍🏫"),
-        st.Page("features/1-Roadmap.py", title="Roadmap Generator", icon="📚"),
-        st.Page("features/2-Career-Guidance.py", title="Career Guidance", icon="🚀"),
+        st.Page("features/0-AI-Mentor.py", title="CareerBot AI", icon="🧑🏻‍🏫"),
+        st.Page("features/1-Skill-Assessment.py", title="SkillLens", icon="📊"),
+        st.Page("features/2-Roadmap.py", title="PathFinder", icon="📚"),
+        st.Page("features/RAG.py", title="LearnWise", icon="🎓"),
+        # st.Page("features/Resume-Analyzer.py", title="Resume Analyzer", icon="📄"),
+        st.Page("features/2-Career-Guidance.py", title="CareerNavigator", icon="🚀"),
+        st.Page("features/Mock-Interview.py", title="InterviewPro", icon="🎙️"),
         st.Page("features/Feedback.py", title="Feedback", icon="📝"),
     ])
      pg.run()

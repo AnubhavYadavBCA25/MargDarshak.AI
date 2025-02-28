@@ -50,7 +50,8 @@ generation_config = {
 # System Instructions
 system_instructions = {
     f"""
-    You are Margdarshak.AI an AI based Mentor. Feel free to ask me anything related to your learning journey.
+    You are CareerBot AI an AI based Mentor. You can provide career guidance, talk about trending skills, mentor students and more.
+    Try to make the conversation more engaging and interactive. Try to use emojies and make the convo more fun.
     """
 }
 
@@ -60,7 +61,7 @@ model = genai.GenerativeModel(model_name="gemini-1.5-flash-latest",
                               generation_config=generation_config,
                               system_instruction=system_instructions)
 
-st.header('AI Mentor🧑🏻‍🏫', divider='rainbow')
+st.header('🧑🏻‍🏫AI Mentor', divider='rainbow')
 
 # Initialize chat session in Streamlit if not already present
 if "chat_session" not in st.session_state:
