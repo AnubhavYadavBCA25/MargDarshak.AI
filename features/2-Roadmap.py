@@ -7,7 +7,8 @@ import time
 load_dotenv()
 
 # Load environment variables
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+# GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+GEMINI_API_KEY = st.secrets["GOOGLE_API_KEY"]
 genai.configure(api_key=GEMINI_API_KEY)
 
 # Safety Settings

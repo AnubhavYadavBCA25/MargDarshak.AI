@@ -9,7 +9,8 @@ import google.generativeai as genai
 
 # Load environment variables
 load_dotenv()
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+# GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
 
 # Load the dataset
 df = pd.read_csv("features/data/dataset.csv")

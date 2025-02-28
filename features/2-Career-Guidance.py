@@ -10,8 +10,10 @@ from dotenv import load_dotenv
 
 # Load API Keys
 load_dotenv()
-RAPIDAPI_KEY = os.getenv("RAPIDAPI_KEY")
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+# RAPIDAPI_KEY = os.getenv("RAPIDAPI_KEY")
+RAPIDAPI_KEY = st.secrets["RAPIDAPI_KEY"]
+# GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+GEMINI_API_KEY = st.secrets["GOOGLE_API_KEY"]
 
 # Configure Gemini AI
 genai.configure(api_key=GEMINI_API_KEY)

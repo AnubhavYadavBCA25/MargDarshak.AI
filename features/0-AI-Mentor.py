@@ -13,7 +13,8 @@ load_dotenv()
 # preferred_lang = user_data.get("preferred_lang")
 
 # Load environment variables
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+# GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+GEMINI_API_KEY = st.secrets["GOOGLE_API_KEY"]
 genai.configure(api_key=GEMINI_API_KEY)
 
 # Safety Settings

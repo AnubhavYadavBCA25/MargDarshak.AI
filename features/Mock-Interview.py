@@ -5,7 +5,8 @@ import pyttsx3
 import speech_recognition as sr
 import google.generativeai as genai
 
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+GEMINI_API_KEY = st.secrets["GOOGLE_API_KEY"]
+genai.configure(api_key=GEMINI_API_KEY)
 
 # Initialize Text-to-Speech Engine
 def speak_text(text):
