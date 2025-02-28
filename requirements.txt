@@ -13,6 +13,7 @@ pandas
 pyPDF2
 faiss-cpu
 sentence-transformers
+setuptools
 # pyttsx3
 # SpeechRecognition
 # pipwin
