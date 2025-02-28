@@ -6,7 +6,7 @@ python-dotenv
 streamlit_lottie==0.0.5
 openpyxl
 pymongo[srv]==3.6
-pymongo==3.13.0
+pymongo
 fitz
 plotly
 pandas
