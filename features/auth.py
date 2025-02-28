@@ -6,6 +6,7 @@ import streamlit_authenticator as stauth
 import pandas as pd
 import os
 import pymongo
+from collections.abc import MutableMapping
 
 # MongoDB Atlas Connection String 
 MONGO_URI = "mongodb+srv://anubhavyadav77ff:anubhav123@cluster0.wimg7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
