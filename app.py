@@ -115,7 +115,7 @@ if st.session_state["authentication_status"]:
         st.Page("features/2-Roadmap.py", title="PathFinder", icon="📚"),
         st.Page("features/RAG.py", title="LearnWise", icon="🎓"),
         st.Page("features/2-Career-Guidance.py", title="CareerNavigator", icon="🚀"),
-        # st.Page("features/Mock-Interview.py", title="InterviewPro", icon="🎙️"),
+        st.Page("features/Mock-Interview.py", title="InterviewPro", icon="🎙️"),
         st.Page("features/Feedback.py", title="Feedback", icon="📝"),
     ])
      pg.run()
